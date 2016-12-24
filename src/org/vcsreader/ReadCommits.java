@@ -11,7 +11,7 @@ public class ReadCommits {
 
 		if (!new File(".hamcrest-clone").exists()) {
 			System.out.println("Cloning...");
-			vcsProject.cloneToLocal();
+			vcsProject.cloneIt();
 		}
 
 		LogResult logResult = vcsProject.log(TimeRange.beforeNow());

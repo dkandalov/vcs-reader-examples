@@ -21,7 +21,7 @@ public class ReadCommitsIgnoringErrors {
 			if (new File(vcsRoot.repoFolder()).exists()) continue;
 
 			System.out.println("Cloning " + vcsRoot.repoUrl());
-			CloneResult cloneResult = vcsRoot.cloneToLocal();
+			CloneResult cloneResult = vcsRoot.cloneIt();
 
 			if (!cloneResult.isSuccessful()) {
 				for (Exception e : cloneResult.exceptions()) {

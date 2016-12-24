@@ -15,7 +15,7 @@ public class ReadCommitsFromSeveralRepos {
 		for (VcsRoot vcsRoot : vcsProject.vcsRoots()) {
 			if (!new File(vcsRoot.repoFolder()).exists()) {
 				System.out.println("Cloning " + vcsRoot.repoUrl());
-				vcsRoot.cloneToLocal();
+				vcsRoot.cloneIt();
 			}
 		}
 
